@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Débora GNUITO — Ingénieure de Données</title>
+  <meta name="description" content="Portfolio — Débora Gnuito, Ingénieure de Données" />
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#98a0b3; --accent:#7dd3fc;
+      --glass: rgba(255,255,255,0.04);
+      --radius:16px; --maxw:1000px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; background:linear-gradient(180deg,#071029 0%, #071b2a 60%); color:#e6eef8;
+      line-height:1.5; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      padding:40px 20px;
+      display:flex; justify-content:center;
+    }
+    .wrap{width:100%; max-width:var(--maxw)}
+    header{
+      display:flex; gap:18px; align-items:center; margin-bottom:28px;
+    }
+    .avatar{
+      width:96px; height:96px; border-radius:14px; background:linear-gradient(135deg,var(--accent),#60a5fa);
+      display:flex; align-items:center; justify-content:center; font-weight:700; color:#042029; font-size:28px;
+      box-shadow:0 6px 30px rgba(0,0,0,0.6);
+    }
+    h1{margin:0;font-size:22px}
+    .subtitle{color:var(--muted); margin-top:6px; font-size:14px}
+    .grid{
+      display:grid; grid-template-columns: 1fr 340px; gap:20px;
+    }
+    @media (max-width:900px){ .grid{grid-template-columns:1fr} .sidebar {order:2} }
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent); border-radius:var(--radius); padding:18px; box-shadow:0 8px 30px rgba(2,6,23,0.6); }
+    .section-title{font-weight:700; margin-bottom:10px; color:#dff7ff}
+    p.lead{color:var(--muted); margin:0 0 12px 0}
+    .chip{display:inline-block; padding:6px 10px; background:var(--glass); border-radius:999px; color:var(--muted); font-size:13px; margin-right:8px; margin-bottom:8px}
+    .projects{display:grid; gap:12px}
+    .project{
+      padding:12px; border-radius:12px; background:rgba(255,255,255,0.02); display:flex; justify-content:space-between; align-items:center;
+    }
+    .project h4{margin:0;font-size:15px}
+    .project p{margin:6px 0 0 0; color:var(--muted); font-size:13px}
+    .btn{
+      display:inline-block; padding:8px 12px; border-radius:10px; background:linear-gradient(90deg,var(--accent),#60a5fa); color:#042029; text-decoration:none; font-weight:600; font-size:13px;
+    }
+    .sidebar .contact p{margin:6px 0; color:var(--muted)}
+    ul.skills{list-style:none;padding:0;margin:0; display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:8px}
+    footer{margin-top:22px; color:var(--muted); font-size:13px; text-align:center}
+    nav{display:flex; gap:10px; margin-top:6px}
+    nav a{color:var(--muted); text-decoration:none; font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="avatar">DG</div>
+      <div>
+        <h1>Débora GNUITO</h1>
+        <div class="subtitle">Ingénieure de Données — pipelines • Big Data • Temps réel</div>
+        <nav>
+          <a href="#formations">Formations</a>
+          <a href="#experiences">Expériences</a>
+          <a href="#projets">Projets</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="grid">
+      <!-- Main column -->
+      <main>
+        <section class="card" id="presentation">
+          <div class="section-title">Présentation</div>
+          <p class="lead">
+            Ingénieure en informatique spécialisée en ingénierie des données, experte dans la mise en place de pipelines de données, le traitement distribué et l’analyse en temps réel. Je conçois des systèmes robustes et reproductibles et je suis passionnée par l’optimisation et la valorisation des données.
+          </p>
+        </section>
+
+        <section class="card" id="formations" style="margin-top:16px">
+          <div class="section-title">Diplômes & Formations</div>
+          <strong>Diplôme d'ingénieur en Ingénierie des Données</strong><br/>
+          FSS Tunisie, Sfax — <small class="muted">Sept. 2022 – Juil. 2025</small>
+          <hr style="border:none;height:10px"/>
+          <strong>Licence en Sciences Informatiques</strong><br/>
+          FSS Tunisie, Sfax — <small class="muted">Sept. 2019 – Juin 2022</small>
+        </section>
+
+        <section class="card" id="experiences" style="margin-top:16px">
+          <div class="section-title">Expériences Professionnelles</div>
+
+          <h3 style="margin:6px 0 4px 0">Orchestration dynamique d’un cluster IA</h3>
+          <small class="muted">Data Engineering and Semantics Research Unit — Fév. 2025 – Juil. 2025</small>
+          <ul>
+            <li>Mise en place d’environnements IA préconfigurés (Jupyter/Docker/Harbor).</li>
+            <li>Gestion Kubernetes en haute disponibilité ; automatisation avec Ansible.</li>
+          </ul>
+
+          <h3 style="margin:6px 0 4px 0">Analyse et prédiction des données en temps réel</h3>
+          <small class="muted">Data Engineering and Semantics Research Unit — Juin 2024 – Août 2024</small>
+          <ul>
+            <li>Pipeline temps réel : Kafka → Spark → Elasticsearch.</li>
+            <li>Detection & sentiment analysis sur flux vidéo (OpenCV, YOLO, DeepFace).</li>
+          </ul>
+
+          <h3 style="margin:6px 0 4px 0">Architecture Big Data (Qualité des données)</h3>
+          <small class="muted">Sifast — Juin 2024 – Août 2024</small>
+          <ul>
+            <li>Identification et suivi des métriques de qualité ; Apache Griffin.</li>
+          </ul>
+        </section>
+
+        <section class="card" id="competences" style="margin-top:16px">
+          <div class="section-title">Compétences</div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <span class="chip">Big Data & Architecture</span>
+            <span class="chip">Spark • Kafka • Hadoop</span>
+            <span class="chip">DevOps • Docker • K8s</span>
+            <span class="chip">MLOps • TensorFlow • PyTorch</span>
+            <span class="chip">LLM • Hugging Face • LangChain</span>
+            <span class="chip">Kibana • Grafana • PowerBI</span>
+            <span class="chip">Bash • Linux</span>
+            <span class="chip">Python • Java • Scala</span>
+          </div>
+        </section>
+
+        <section class="card" id="projets" style="margin-top:16px">
+          <div class="section-title">Projets Techniques</div>
+          <div class="projects">
+            <div class="project">
+              <div>
+                <h4>Analyse de sentiments en langue EWE</h4>
+                <p>Collecte & annotation manuelle → Modélisation → Déploiement temps réel.</p>
+              </div>
+              <div><a class="btn" href="#" aria-label="Lien projet">Voir</a></div>
+            </div>
+
+            <div class="project">
+              <div>
+                <h4>MLOps — Prévision des retards de vols</h4>
+                <p>Pipeline complet, versioning (MLflow/DVC), déploiement Heroku.</p>
+              </div>
+              <div><a class="btn" href="https://mlops-flight-delay-frontend-52b4f0248958.herokuapp.com/">App</a></div>
+            </div>
+
+            <div class="project">
+              <div>
+                <h4>LLM — Q&R COVID-19 (FR)</h4>
+                <p>Fine-tuning LLaMA spécialisé médical, déploiement pour FAQ médicale.</p>
+              </div>
+              <div><a class="btn" href="#" aria-label="Lien projet">Voir</a></div>
+            </div>
+
+            <div class="project">
+              <div>
+                <h4>Computer Vision — Tri des déchets</h4>
+                <p>Classification & détection (deep learning + méthodes classiques).</p>
+              </div>
+              <div><a class="btn" href="#" aria-label="Lien projet">Voir</a></div>
+            </div>
+
+            <div class="project">
+              <div>
+                <h4>Traçabilité produits (Blockchain)</h4>
+                <p>Blockchain privée (Ganache), smart contracts, frontend React.</p>
+              </div>
+              <div><a class="btn" href="#" aria-label="Lien projet">Voir</a></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card" id="certifications" style="margin-top:16px">
+          <div class="section-title">Certifications</div>
+          <ul>
+            <li>Microsoft — Principes de base d’Azure ; Principes de base d’Azure AI</li>
+            <li>NVIDIA — Fundamentals of Deep Learning ; Generative AI with Diffusion Models</li>
+          </ul>
+        </section>
+
+      </main>
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="card contact" id="contact">
+          <div class="section-title">Contact</div>
+          <p><strong>📧</strong> deb.gnuito@gmail.com</p>
+          <p><strong>📞</strong> 07 80 88 11 24</p>
+          <p><strong>📍</strong> Mantes-la-Ville (78711)</p>
+          <p><strong>💼</strong> LinkedIn / GitHub : <a href="https://github.com/debgnuito" style="color:var(--accent); text-decoration:none;">@debgnuito</a></p>
+          <hr style="border:none;height:12px"/>
+          <a class="btn" href="mailto:deb.gnuito@gmail.com">Me contacter</a>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <div class="section-title">Langages & Outils</div>
+          <ul class="skills">
+            <li>Python</li><li>Java</li><li>Scala</li><li>C</li>
+            <li>SQL</li><li>HTML / JS</li><li>Spark</li><li>Kafka</li>
+          </ul>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <div class="section-title">Atouts & Intérêts</div>
+          <p class="lead">Autonomie · Dynamisme · Esprit d’équipe</p>
+          <p class="lead">Actualité · Voyages · Innovation · Lecture</p>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      © <span id="year"></span> Débora GNUITO — Ingénieure de Données • <small style="color:var(--muted)">Portfolio généré automatiquement</small>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
